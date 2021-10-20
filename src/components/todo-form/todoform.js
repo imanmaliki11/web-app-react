@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Form, Row, Col, Button } from 'react-bootstrap';
 import './todoform.css'
 
 
@@ -16,16 +17,25 @@ const TodoForm = (props) => {
             id: Math.floor(Math.random() * 1000) + 1,
             val: getInputTodo
         }
+        setInputTodo('')
         props.addItem(item)
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="todoinput" placeholder="Input New Todo List" onChange={handleInput} autoComplete="off" />
-                <button type="submit">Add</button>
-            </form>
-        </div>
+            <Form onSubmit={handleSubmit}>
+                <Row>
+                    <Col xs lg={8}>
+                        <Form.Control type="text" name="todoinput" placeholder="Input New Todo List" onChange={handleInput} value={getInputTodo} autoComplete="off" />
+                    </Col>
+                    <Col xs lg="auto">
+                        <Button variant="primary" type="submit">
+                            Add
+                        </Button>
+                    </Col>
+                </Row>
+            </Form>
+        </div >
     );
 }
 
