@@ -10,8 +10,6 @@ import {
   Route
 } from "react-router-dom";
 
-import { Button } from 'react-bootstrap';
-
 export default function App() {
   return (
     <Router>
@@ -38,7 +36,6 @@ export default function App() {
           </Route>
           <Route path="/">
             <Home />
-            <Button variant="outline-primary">Primary</Button>{' '}
           </Route>
         </Switch>
       </div>
