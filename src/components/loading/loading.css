@@ -1,10 +1,11 @@
 .full {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
     background-color: rgba(82, 73, 63, 0.705);
+    overflow: hidden;
 }
 
 .to-center {

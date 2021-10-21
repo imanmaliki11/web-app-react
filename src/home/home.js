@@ -1,6 +1,5 @@
-import Button from '@restart/ui/esm/Button'
 import { useState } from 'react'
-import { Container, Table } from 'react-bootstrap'
+import { Container, Table, Button } from 'react-bootstrap'
 import Loading from '../components/loading/loading'
 import axios from 'axios'
 import './home.css'
@@ -36,7 +35,7 @@ const Home = () => {
             ) : (<></>)}
             <div>
                 <h4>Home Page</h4>
-                <Button variant="info" onClick={handleClick}>Coba</Button>
+                <Button variant="outline-primary" onClick={handleClick}>Hit API</Button>{' '}
                 <Table striped bordered hover size="sm" className="mt-3">
                     <thead>
                         <tr>
@@ -58,7 +57,6 @@ const Home = () => {
                     </tbody>
                 </Table>
             </div>
-
         </Container>
     )
 }

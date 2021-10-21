@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 const TodoList = (props) => {
     return (
-        <Table striped bordered hover size="sm" className="mt-3">
+        <Table responsive striped bordered hover variant="dark" size="xs" className="mt-3">
             <thead>
                 <tr>
                     <th>#</th>
