@@ -14,8 +14,10 @@ const Home = () => {
         setLoading(true)
         e.preventDefault()
         allAPI.News(getInputQ).then((res) => {
-            if (res.articles)
+            if (res.articles) {
                 setNews(res.articles)
+                console.log(res.articles)
+            }
             else
                 setNews({})
             setLoading(false)
